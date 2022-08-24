@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Convert local variable &apos;com.example.smarthome.NetUtils.sendMessage().new Runnable() {...}.run().client&apos; in &apos;com.example.smarthome.NetUtils.sendMessage().new Runnable() {...}.run()&apos; to field&#x0D;&#x0A;- Original project: &apos;smarthome_factory2&apos;&#x0D;&#x0A;- Original element: &apos;com.example.smarthome.NetUtils.sendMessage().new Runnable() {...}.run().client&apos;&#x0D;&#x0A;- Field name: &apos;client&apos;&#x0D;&#x0A;- Initialize field in method&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" description="Convert local variable &apos;client&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src&lt;com.example.smarthome{NetUtils.java" name="client" selection="584 42" stamp="1650529624661" static="false" version="1.0" visibility="2"/>
+</session>

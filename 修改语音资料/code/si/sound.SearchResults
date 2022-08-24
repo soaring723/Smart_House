@@ -1,0 +1,2 @@
+---- int8_t Matches (1 in 1 files) ----
+config.h (C:\Users\23603\Desktop\V0.7 08XE基本识别程序(口令模式--默认出厂)\code) line 6 : typedef   signed          char int8_t;

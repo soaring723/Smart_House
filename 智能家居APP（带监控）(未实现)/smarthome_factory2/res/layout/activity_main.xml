@@ -1,0 +1,279 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8BFD8"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#D8BFD8"
+        android:stretchColumns="0,1" 
+        >
+                
+        <WebView
+            android:id="@+id/web"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center" />
+<TableRow >
+        
+             
+                <TableRow >
+                
+                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="温度："
+                  
+                    android:textSize="20sp" />
+                 
+                 <TextView
+                     android:id="@+id/wd"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:textColor="#ffffff00"
+                     android:textSize="20sp" />
+
+                  </TableRow>
+<TableRow >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="湿度："
+                    
+                    android:textSize="20sp" />
+           
+                   <TextView
+                       android:id="@+id/sd"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textColor="#ffffff00"
+                       android:textSize="20sp" />
+
+                    </TableRow>
+ </TableRow>
+
+<TableRow >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="火灾监测："
+                    
+                    android:textSize="20sp" />
+           
+                   <TextView
+                       android:id="@+id/fire"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textColor="#ffff0000"
+                       android:textSize="20sp" />
+
+                    </TableRow>
+
+<TableRow >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="震动监测："
+                    
+                    android:textSize="20sp" />
+           
+                   <TextView
+                       android:id="@+id/shake"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textColor="#ffff0000"
+                       android:textSize="20sp" />
+
+                    </TableRow>
+
+          <TableRow >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="人体红外监测："
+                    
+                    android:textSize="20sp" />
+           
+                   <TextView
+                       android:id="@+id/infrared"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textColor="#ffff0000"
+                       android:textSize="20sp" />
+
+                    </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/kct"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="开餐厅灯" />
+
+            <Button
+                android:id="@+id/gct"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="关餐厅灯" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/kws"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="开卧室灯" />
+
+            <Button
+                android:id="@+id/gws"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="关卧室灯" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/kkt"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="开客厅灯" />
+
+            <Button
+                android:id="@+id/gkt"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="关客厅灯" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/kys"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="开浴室灯" />
+
+            <Button
+                android:id="@+id/gys"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="关浴室灯" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/kyc"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="开泳池灯" />
+
+            <Button
+                android:id="@+id/gyc"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="关泳池灯" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/kqb"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="开室内全部灯" />
+
+            <Button
+                android:id="@+id/gqb"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="关室内全部灯" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/kdfs"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="开电风扇" />
+
+            <Button
+                android:id="@+id/gdfs"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="关电风扇" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/khw"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="打开人体红外检测" />
+
+            <Button
+                android:id="@+id/ghw"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="关闭人体红外检测" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/kjk"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="打开视频监控" />
+
+            <Button
+                android:id="@+id/gjk"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="关闭视频监控" />
+        </TableRow>
+
+             <TableRow>
+
+            <Button
+                android:id="@+id/gjms"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="归家模式" />
+
+            <Button
+                android:id="@+id/ljms"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="离家模式" />
+        </TableRow>
+        
+        <Button
+            android:id="@+id/face"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="人脸识别开锁" />
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

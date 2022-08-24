@@ -1,0 +1,272 @@
+package com.example.smarthome;
+import java.io.OutputStream;
+import java.net.Socket;
+
+
+
+
+import android.os.Bundle;
+import android.app.Activity;
+
+
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Button;
+import android.view.View.OnClickListener;
+public class MainActivity extends Activity {
+	Button kct;
+	Button gct;
+	Button kws;
+	Button gws;
+	Button kkt;
+	Button gkt;
+	Button kys;
+	Button gys;
+	Button ljms;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		     
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		  setContentView(R.layout.activity_main);
+        WebView wb = (WebView) findViewById(R.id.web);
+        wb.setWebViewClient(new WebViewClient());
+        String s="http://192.168.1.107:8080/?action=stream";
+        wb.loadUrl(s);
+  
+       
+    	kct=(Button)findViewById(R.id.kct);
+    	gct=(Button)findViewById(R.id.gct);
+    	kws=(Button)findViewById(R.id.kws);
+    	gws=(Button)findViewById(R.id.gws);
+    	kkt=(Button)findViewById(R.id.kkt);
+    	gkt=(Button)findViewById(R.id.gkt);
+    	kys=(Button)findViewById(R.id.kys);
+    	gys=(Button)findViewById(R.id.gys);
+    	ljms=(Button)findViewById(R.id.ljms);
+    	
+    	
+    	kct.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+			  new NetUtils("kct").sendMessage();
+			}
+		});
+    	gct.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				 new NetUtils("gct").sendMessage();
+			}
+		});
+    	kws.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				 new NetUtils("kws").sendMessage();
+			}
+		});
+    	gws.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				 new NetUtils("gws").sendMessage();
+			}
+		});
+    	kkt.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				 new NetUtils("kkt").sendMessage();
+			}
+		});
+    	gkt.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				 new NetUtils("gkt").sendMessage();
+			}
+		});
+    	kys.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				 new NetUtils("kys").sendMessage();
+			}
+		});
+    	gys.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				 new NetUtils("gys").sendMessage();
+			}
+		});
+    	ljms.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				 new NetUtils("ljms").sendMessage();
+			}
+		});
+    }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* void initView() {
+    	kd=(Button)findViewById(R.id.kd);
+    	gd=(Button)findViewById(R.id.gd);
+    	dkds=(Button)findViewById(R.id.dkds);
+    	gbds=(Button)findViewById(R.id.gbds);
+    	ht=(Button)findViewById(R.id.ht);
+    	kj=(Button)findViewById(R.id.kj);
+    	kd.setOnTouchListener(new OnTouchListener() {
+			
+			@Override
+			public boolean onTouch(View arg0, MotionEvent event) {
+				switch (event.getAction()) {
+				case MotionEvent.ACTION_DOWN:
+					new NetUtils("3").sendMessage();
+					break;
+				case MotionEvent.ACTION_UP: {
+					new NetUtils("3").sendMessage();
+					break;
+				}
+
+				}
+				return false;
+			}
+		});
+   	gd.setOnTouchListener(new OnTouchListener() {
+			
+			@Override
+			public boolean onTouch(View arg0, MotionEvent event) {
+				switch (event.getAction()) {
+				case MotionEvent.ACTION_DOWN:
+					new NetUtils("4").sendMessage();
+					break;
+				case MotionEvent.ACTION_UP: {
+					new NetUtils("3").sendMessage();
+					break;
+				}
+
+				}
+				return false;
+			}
+		});
+    	dkds.setOnTouchListener(new OnTouchListener() {
+			
+			@Override
+			public boolean onTouch(View arg0, MotionEvent event) {
+				switch (event.getAction()) {
+				case MotionEvent.ACTION_DOWN:
+					new NetUtils("1").sendMessage();
+					break;
+				case MotionEvent.ACTION_UP: {
+					new NetUtils("3").sendMessage();
+					break;
+				}
+
+				}
+				return false;
+			}
+		});
+    	gbds.setOnTouchListener(new OnTouchListener() {
+			
+			@Override
+			public boolean onTouch(View arg0, MotionEvent event) {
+				switch (event.getAction()) {
+				case MotionEvent.ACTION_DOWN:
+					new NetUtils("2").sendMessage();
+					break;
+				case MotionEvent.ACTION_UP: {
+					new NetUtils("3").sendMessage();
+					break;
+				}
+
+				}
+				return false;
+			}
+		});
+    	ht.setOnTouchListener(new OnTouchListener() {
+			
+			@Override
+			public boolean onTouch(View arg0, MotionEvent event) {
+				switch (event.getAction()) {
+				case MotionEvent.ACTION_DOWN:
+					new NetUtils("6").sendMessage();
+					break;
+				case MotionEvent.ACTION_UP: {
+					new NetUtils("3").sendMessage();
+					break;
+				}
+
+				}
+				return false;
+			}
+		});
+    	 
+    	kj.setOnTouchListener(new OnTouchListener() {
+			
+			@Override
+			public boolean onTouch(View arg0, MotionEvent event) {
+				switch (event.getAction()) {
+				case MotionEvent.ACTION_DOWN:
+					new NetUtils("5").sendMessage();
+					b++;
+					break;
+				case MotionEvent.ACTION_UP: {
+					if(b%2==0)
+					{
+					kj.setText("关闭电视");
+					}
+					else
+					{kj.setText("打开电视");}
+					break;
+				}
+
+				}
+				return false;
+			}
+		});
+    	
+    	
+    }
+    */

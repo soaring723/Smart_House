@@ -1,0 +1,50 @@
+package com.example.smarthome;
+
+
+import java.io.OutputStream;
+import java.net.Socket;
+
+import android.os.Handler;
+
+
+
+public class NetUtils {
+
+	public String  message;
+	public String  reTurnMes;
+	public Handler handler;
+
+	public NetUtils(String message) {
+		this.message = message;
+	}
+
+	public NetUtils(String message, Handler handler) {
+		this.message = message;
+		this.handler = handler;
+	}
+
+	public void sendMessage() {
+
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				try {
+					 Socket client = new Socket("192.168.72.9",8083);
+					//Socket client = new Socket(StartActivity.IP, Integer.parseInt(StartActivity.Port));
+					OutputStream out = client.getOutputStream();
+					out.write(message.getBytes());				
+					out.close();
+					client.close();
+					
+
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}).start();
+
+	}
+}
